@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Poetry environment files
+poetry.lock
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+.eggs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Python-specific cache and logs
+*.log
+
+# Data files
+data/interim/
+data/processed/
+*.csv:Zone.Identifier
+
+# PDF and PPTX Zone Identifier metadata
+*.pdf:Zone.Identifier
+*.pptx:Zone.Identifier
+
+# VS Code settings and environments
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
