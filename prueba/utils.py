@@ -21,11 +21,8 @@ def read_csv_file(file_path):
         df = pd.read_csv(file_path)
         logging.info("File read successfully!")
         return df
-    except FileNotFoundError:
+    except:
         logging.error(f"File not found: {file_path}")
-        return None
-    except Exception as e:
-        logging.error(f"An error occurred: {e}")
         return None
     
 def process_and_save_as_parquet(df, output_parquet_path):
