@@ -40,6 +40,8 @@ def process_and_save_as_parquet(df, output_parquet_path):
     Returns:
     DataFrame: The processed DataFrame.
     """
+    # Drop a column
+    df = df.drop(columns = ['ID'])
     # Define column names
     nombres = [
         'edad', 'trabajo', 'estado_civil', 'educacion', 'mora', 'vivienda', 
@@ -60,7 +62,7 @@ def process_and_save_as_parquet(df, output_parquet_path):
     
     # Save the DataFrame as a Parquet file
     df.to_parquet(output_parquet_path, index=False)
-    logging.info(f"Data saved to {output_parquet_path} successfully.")
+    logging.info(f"Preprocessed data saved to {output_parquet_path} successfully.")
     
     # Return the processed DataFrame
     return df

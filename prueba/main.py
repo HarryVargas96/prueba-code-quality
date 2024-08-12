@@ -17,6 +17,8 @@ df = read_csv_file(file_path)
 
 logging.info(f"Data shape {df.shape}")
 
-interim_data_path = "/ho/hvarga/prueba/data/interim/train.parquet"
+interim_data_path = "/home/hvarga/prueba/data/interim/train.parquet"
 df = process_and_save_as_parquet(df = df,output_parquet_path=interim_data_path)
 
+# Test for checking
+print(df.info())
